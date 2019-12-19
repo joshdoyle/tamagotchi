@@ -11,11 +11,29 @@ class Tamagotchi {
 
 const game = {
 	name: '',
+	time: 0,
+	timer: 0,
 
 	play(n){
+		// Name the Tamagotchi
 		this.name = n
-	}
-	
+
+		this.startTime()
+
+
+		console.log('time is ' + this.time)
+		},
+
+	startTime(){
+		this.timer = setInterval(() => {
+			this.time++
+			},1000)
+
+	},
+
+	stopTime(){
+		clearInterval(this.timer)
+	}	
 }
 
 

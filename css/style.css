@@ -1,14 +1,52 @@
 #tama {
-border-radius:50px;
-width:50px;
+width: 50px;
 height:50px;
-background:#c00;
-position:absolute;
-top:0;
-left:0;
--moz-transition: transform 1s; 
--webkit-transition: transform 1s;  
--ms-transition: transform 1s;  
--o-transition: transform 1s;  
-transition: transform 1s;  
+background-color:red;
+position:fixed;
+visibility: hidden;    
+}
+
+h1 {
+	text-align: center;
+}
+
+#Form {
+	border: 1px black solid;
+	border-radius: 10%;
+	margin: 10px;
+	padding: 20px;
+	font-size: 25px;
+
+}
+
+.flex-side {
+    width: 200px;
+    height: 100%;
+    border: 1px black solid;
+    border-radius: 10%;
+    text-align: center;
+    /*background: #369;*/
+}
+
+.flex-center {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;*/
+    width: 700px;
+    height: 100%;
+    border: 1px black solid;
+    border-radius: 10%;
+
+    /*background: #369;*/
+}
+
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+    height: 550px;
+    /*border*/: 1px black solid;
+    margin: 0 auto;
 }

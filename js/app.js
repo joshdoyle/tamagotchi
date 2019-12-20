@@ -15,6 +15,12 @@ const game = {
 	timer: 0,
 
 	play(n){
+		// 
+		//remove form
+		$('form').remove()
+
+		// show tama
+		$('#tama').css('visibility', 'visible')
 		// Name the Tamagotchi
 		this.name = n
 
@@ -22,6 +28,9 @@ const game = {
 
 
 		console.log('time is ' + this.time)
+		console.log('pen dims')
+		console.log($('#pen').height())
+		console.log($('#pen').width())
 		},
 
 	startTime(){
@@ -44,11 +53,16 @@ const game = {
 // give credit for this code
 //http://jsfiddle.net/Xw29r/15/
 
+const penHeight = 550
+const penWidth = 700
+const tamaHeight = 50
+const tamaWidth = 50
+
 function makeNewPosition(){
     
     // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
+    var h = penHeight - tamaHeight;
+    var w = penWidth - tamaWidth;
     
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);
@@ -57,31 +71,13 @@ function makeNewPosition(){
     
 }
 
-function animateDiv(){
+function animateDiv(myclass){
     var newq = makeNewPosition();
-    var oldq = $('#tama').offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-    
-    $('#tama').animate({ top: newq[0], left: newq[1] }, speed, function(){
-      animateDiv();        
+    $('#tama').animate({ top: newq[0], left: newq[1] }, 4000,   function(){
+      animateDiv('#tama');        
     });
     
 };
-
-function calcSpeed(prev, next) {
-    
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-    
-    var greatest = x > y ? x : y;
-    
-    var speedModifier = 0.1;
-
-    var speed = Math.ceil(greatest/speedModifier);
-
-    return speed;
-
-}
 
 
 /////animation

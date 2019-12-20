@@ -3,11 +3,16 @@ width: 50px;
 height:50px;
 background-color:red;
 position:fixed;
-visibility: hidden;    
+visibility: hidden;   
+border-radius: 50%; 
 }
 
 h1 {
 	text-align: center;
+}
+
+.lights-out {
+	background-color: gray;
 }
 
 #Form {
@@ -16,7 +21,11 @@ h1 {
 	margin: 10px;
 	padding: 20px;
 	font-size: 25px;
+}
 
+button {
+	display: block;
+	margin: auto 0;
 }
 
 .flex-side {

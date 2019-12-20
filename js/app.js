@@ -200,17 +200,17 @@ const game = {
 
 	makeNewPosition() {
 		// Get viewport dimensions (remove the dimension of the div)
-		var h = $(window).height() - 50;
-		var w = $(window).width() - 50;
+		const h = $(window).height() - 50;
+		const w = $(window).width() - 50;
 
-		var nh = Math.floor(Math.random() * h);
-		var nw = Math.floor(Math.random() * w);
+		const nh = Math.floor(Math.random() * h);
+		const nw = Math.floor(Math.random() * w);
 
 		return [nh, nw];
 	},
 
 	animateDiv() {
-		var newq = this.makeNewPosition();
+		const newq = this.makeNewPosition();
 		$("#tama").animate({ top: newq[0], left: newq[1] }, this.myTama.speed); 
 
 	}

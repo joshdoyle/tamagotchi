@@ -5,6 +5,7 @@ background-color:red;
 position:fixed;
 visibility: hidden;   
 border-radius: 50%; 
+opacity; 0;
 }
 
 h1 {
@@ -24,8 +25,11 @@ h1 {
 }
 
 button {
+	margin: 0 auto;
+	position: relative;
 	display: block;
-	margin: auto 0;
+	font-size: 110%
+
 }
 
 .flex-side {
@@ -34,6 +38,8 @@ button {
     border: 1px black solid;
     border-radius: 10%;
     text-align: center;
+    display: block;
+
     /*background: #369;*/
 }
 
